@@ -1,8 +1,8 @@
 const Key = "c60affe7bd71ca5cf3853f5a6fba4dbb";
 const location = ["Cape+Town", "Johannesburg", "Durban"];
-const API_URL = [`http://api.openweathermap.org/data/2.5/weather?q=${location[0]}&APPID=${Key}`,
-    `http://api.openweathermap.org/data/2.5/weather?q=${location[1]}&APPID=${Key}`,
-    `http://api.openweathermap.org/data/2.5/weather?q=${location[2]}&APPID=${Key}`
+const API_URL = [`https://api.openweathermap.org/data/2.5/weather?q=${location[0]}&APPID=${Key}`,
+    `https://api.openweathermap.org/data/2.5/weather?q=${location[1]}&APPID=${Key}`,
+    `https://api.openweathermap.org/data/2.5/weather?q=${location[2]}&APPID=${Key}`
 ];
 
 function getWeather() {
