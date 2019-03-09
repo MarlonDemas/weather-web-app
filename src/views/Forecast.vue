@@ -48,4 +48,10 @@
         justify-content: space-between;
         margin-bottom: 1em;
     }
+
+    @media only screen and (max-width: 540px) {
+        .location {
+            display: block;
+        }
+    }
 </style>

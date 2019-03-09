@@ -41,7 +41,7 @@ export default new VueRouter({
       children: appRoutes
     },
     {
-      path: '*', redirect: '/app/home'
+      path: '', redirect: '/app/home'
     }
   ]
 });

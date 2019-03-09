@@ -65,5 +65,27 @@
         display: flex;
         justify-content: space-between;
     }
+
+    @media only screen and (max-width: 635px) {
+        .main-container {
+            padding: 10%;
+        }
+
+        .row {
+            font-size: 1em;
+            font-weight: 700;
+        }
+    }
+
+    @media only screen and (max-width: 440px) {
+        .card-text, h4, .card-header {
+            display: block;
+            text-align: center;
+        }
+
+        .card-text div {
+            padding: 0.5em;
+        }
+    }
 </style>
 
