@@ -32,12 +32,16 @@ const appRoutes = [
 
 export default new VueRouter({
   mode: 'history',
+  base: __dirname,
   routes: [
     {
       path: '/app',
       name: 'app',
       component: App,
       children: appRoutes
+    },
+    {
+      path: '/app/home', redirect: '*'
     },
     {
       path: '*', redirect: '/app/home'
