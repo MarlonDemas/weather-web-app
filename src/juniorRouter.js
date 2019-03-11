@@ -32,7 +32,6 @@ const appRoutes = [
 
 export default new VueRouter({
   mode: 'history',
-  base: __dirname,
   routes: [
     {
       path: '/app',
