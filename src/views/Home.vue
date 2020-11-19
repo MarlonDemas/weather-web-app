@@ -1,9 +1,9 @@
 <template>
     <div class="home">
         <div class="headings">
-            <Headings v-bind:todaysDate="todaysDate" />
+            <Headings :todaysDate="todaysDate" />
         </div>
-        <WeatherCards v-bind:weathers="weathers" />
+        <WeatherCards :weathers="weathers" />
     </div>
 </template>
 
@@ -22,9 +22,9 @@
         data() {
             return {
                 weathers: [
-                    { id: 0, current: null },
-                    { id: 1, current: null },
-                    { id: 2, current: null }
+                    { id: 0, current: {} },
+                    { id: 1, current: {} },
+                    { id: 2, current: {} }
                 ],
                 todaysDate: null
             };
@@ -32,9 +32,8 @@
         mounted() {
                 for (let i = 0; i < 3; i++) {
                     Weather.getWeather()[i].then(result => {
-                        // console.log(result);
                         this.weathers[i].current = result;
-                });                      
+                    });                      
                 }
 
                 const now = new Date();

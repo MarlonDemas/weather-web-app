@@ -1,17 +1,17 @@
 <template>
     <div class="forecast">
         <div class="headings">
-            <Headings v-bind:todaysDate="todaysDate" />
+            <Headings :todaysDate="todaysDate" />
         </div>
         <div class="location">
-            <div v-if="forecast">
+            <div>
                 <h2>{{forecast.city.name}}</h2>
             </div>
             <div>
                 <h2 class="text-info">5 Day Forecast</h2>
             </div>
         </div>
-        <ForecastCards v-bind:forecast="forecast" />
+        <ForecastCards :forecast="forecast" />
     </div>
 </template>
 
@@ -29,13 +29,15 @@
         data() {
             return {
                 todaysDate: null,
-                forecast: null,
+                forecast: {
+                    city: {},
+                    list: []
+                },
                 id: this.$route.params.id
             }
         },
         mounted() {
             LocationForecast.getForecast(this.$route.params.id).then(result => {
-                console.log(result);
                 this.forecast = result;
             });
         }

@@ -1,6 +1,6 @@
 <template>
-    <div v-if="weathers[0].current" class="row">
-        <div v-bind:key="weather.id" v-for="weather in weathers" class="card bg-light mb-3" style="width: 100%">
+    <div v-if="weathers.length > 0" class="row">
+        <div :key="weather.id" v-for="weather in weathers" class="card bg-light mb-3" style="width: 100%">
             <div class="card-header">{{weather.current.name}}</div>
             <div class="card-body">
                 <h4 class="card-title">Current weather</h4>
